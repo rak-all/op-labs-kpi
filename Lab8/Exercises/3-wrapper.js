@@ -5,7 +5,7 @@ const contract = (fn, ...types) => (...args) => {
     const expected = types[i].name.toLowerCase();
     const actual = typeof args[i];
     if (actual !== expected) {
-    throw new TypeError(`Expected ${expected} received ${actual}`);
+      throw new TypeError(`Expected ${expected} received ${actual}`);
     }
   }
   const result = fn(...args);
